@@ -13,7 +13,7 @@ a Full-Stack Developer specializing in building ultra-fast, high-converting **He
 ## 💎 Featured Project: Lumina Store
 This repository showcases my technical capability through the **Lumina Store**—a live demonstration of a headless architecture.
 
-* **Live Demo:** [View Lumina Store](https://commerce-eight-ebon-12.vercel.app/)
+* **Live Demo:** [View Lumina Store](https://lumina-demo-commerce.vercel.app/)
 * **Performance Score:** 🚀 100/100 (Google PageSpeed)
 * **Key Features:** Custom UI, Infinite Scroll, Instant Page Loads, and Secure Checkout.
 
