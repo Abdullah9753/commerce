@@ -1,12 +1,12 @@
-# 🌑 Developer Next.js | Headless Shopify Expert
+# 🌑 Full Stack Next.js Developer | Headless Shopify
 > **Where Luxury Design Meets High-Performance Engineering.**
 
 ---
 
 ## 🌟 Overview | نظرة عامة
-I am **Abdullah Bamzahem**, a Full-Stack Developer specializing in building ultra-fast, high-converting **Headless Shopify** stores. I transform traditional e-commerce into premium digital experiences using the latest web technologies.
+a Full-Stack Developer specializing in building ultra-fast, high-converting **Headless Shopify** stores. I transform traditional e-commerce into premium digital experiences using the latest web technologies.
 
-أنا **عبد الله بامزاحم**، مطور واجهات متكاملة متخصص في بناء متاجر **Headless Shopify** فائقة السرعة. أقوم بتحويل التجارة الإلكترونية التقليدية إلى تجارب رقمية فاخرة تدمج بين جمال التصميم وقوة الأداء التقني.
+مطور واجهات متكاملة متخصص في بناء متاجر **Headless Shopify** فائقة السرعة. أقوم بتحويل التجارة الإلكترونية التقليدية إلى تجارب رقمية فاخرة تدمج بين جمال التصميم وقوة الأداء التقني.
 
 ---
 
