@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { ApplePayIcon, MadaIcon, MastercardIcon, VisaIcon } from 'components/icons/payment-icons';
 import FooterMenu from 'components/layout/footer-menu';
 import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/shopify';
@@ -40,10 +41,16 @@ export default async function Footer() {
 
       </div>
       <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-4 md:flex-row md:px-4 min-[1320px]:px-0">
           <p>
-            &copy; {copyrightDate} Lumina. All rights reserved.
+            &copy; {copyrightDate === '2023' ? '2023-2026' : '2023-2026'} LUMINA | Crafted by BAMZAHEM Digital
           </p>
+          {/* <div className="flex items-center gap-4 text-neutral-400 dark:text-neutral-500">
+            <VisaIcon className="h-8 opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100" />
+            <MastercardIcon className="h-8 opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100" />
+            <ApplePayIcon className="h-6 w-auto opacity-80 transition-opacity hover:opacity-100 dark:opacity-60 dark:hover:opacity-100" />
+            <MadaIcon className="h-6 w-auto opacity-80 transition-opacity hover:opacity-100 dark:opacity-60 dark:hover:opacity-100" />
+          </div> */}
         </div>
       </div>
     </footer>
