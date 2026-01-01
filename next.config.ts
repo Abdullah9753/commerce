@@ -4,6 +4,10 @@ export default {
     inlineCss: true,
     useCache: true
   },
+  // devIndicators: {
+  //   appIsrStatus: false,
+  //   buildActivity: false
+  // },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [

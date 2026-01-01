@@ -52,10 +52,26 @@ export async function ThreeItemGrid() {
   const [firstProduct, secondProduct, thirdProduct] = homepageItems;
 
   return (
-    <section className="mx-auto grid max-w-(--breakpoint-2xl) gap-4 px-4 pb-4 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
+    <section className="mx-auto grid max-w-(--breakpoint-2xl) gap-8 px-8 pb-12 md:grid-cols-6 md:grid-rows-2 lg:max-h-[calc(100vh-200px)]">
       <ThreeItemGridItem size="full" item={firstProduct} priority={true} />
       <ThreeItemGridItem size="half" item={secondProduct} priority={true} />
       <ThreeItemGridItem size="half" item={thirdProduct} />
+      <div className="flex w-full justify-center md:col-span-6 md:hidden">
+        <Link
+          href="/search"
+          className="rounded-full border border-neutral-200 bg-white px-6 py-3 text-sm font-medium text-black hover:bg-neutral-100 dark:border-neutral-800 dark:bg-black dark:text-white dark:hover:bg-neutral-900"
+        >
+          View All Products
+        </Link>
+      </div>
+      <div className="hidden w-full justify-center md:col-span-6 md:flex">
+        <Link
+          href="/search"
+          className="rounded-full border border-neutral-200 bg-white px-8 py-3 text-sm font-medium text-black transition-all hover:bg-neutral-100 dark:border-neutral-800 dark:bg-black dark:text-white dark:hover:bg-neutral-900"
+        >
+          View All Products
+        </Link>
+      </div>
     </section>
   );
 }

@@ -76,20 +76,23 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
                     <Search />
                   </Suspense>
                 </div>
-                {menu.length ? (
-                  <ul className="flex w-full flex-col">
-                    {menu.map((item: Menu) => (
-                      <li
-                        className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
-                        key={item.title}
-                      >
-                        <Link href={item.path} prefetch={true} onClick={closeMobileMenu}>
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
+                <ul className="flex w-full flex-col">
+                  {menu.map((item: Menu) => (
+                    <li
+                      className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
+                      key={item.title}
+                    >
+                      <Link href={item.path} prefetch={true} onClick={closeMobileMenu}>
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
+                    <Link href="/search" onClick={closeMobileMenu}>
+                      All Products
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </Dialog.Panel>
           </Transition.Child>
