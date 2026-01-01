@@ -61,10 +61,11 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-[-100%]"
           >
-            <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 flex h-full w-full flex-col bg-white pb-6 dark:bg-black">
+            {/* Elegant Night Blue Background (#0B1221/slate-900) */}
+            <Dialog.Panel className="fixed bottom-0 left-0 right-0 top-0 flex h-full w-full flex-col bg-[#0B121E] pb-6 dark:bg-[#0B121E]">
               <div className="p-4">
                 <button
-                  className="mb-4 flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white"
+                  className="mb-4 flex h-11 w-11 items-center justify-center rounded-md border border-[#C5A059] text-[#C5A059] transition-colors"
                   onClick={closeMobileMenu}
                   aria-label="Close mobile menu"
                 >
@@ -76,10 +77,11 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
                     <Search />
                   </Suspense>
                 </div>
+                {/* Gold Text for Links */}
                 <ul className="flex w-full flex-col">
                   {menu.map((item: Menu) => (
                     <li
-                      className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
+                      className="py-2 text-xl text-[#C5A059] transition-colors hover:text-white"
                       key={item.title}
                     >
                       <Link href={item.path} prefetch={true} onClick={closeMobileMenu}>
@@ -87,11 +89,6 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
                       </Link>
                     </li>
                   ))}
-                  <li className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white">
-                    <Link href="/search" onClick={closeMobileMenu}>
-                      All Products
-                    </Link>
-                  </li>
                 </ul>
               </div>
             </Dialog.Panel>
