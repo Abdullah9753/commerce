@@ -1,7 +1,6 @@
-import { ImageResponse } from 'next/og';
-import LogoIcon from './icons/logo';
-import { join } from 'path';
 import { readFile } from 'fs/promises';
+import { ImageResponse } from 'next/og';
+import { join } from 'path';
 
 export type Props = {
   title?: string;
@@ -20,11 +19,14 @@ export default async function OpengraphImage(
   const file = await readFile(join(process.cwd(), './fonts/Inter-Bold.ttf'));
   const font = Uint8Array.from(file).buffer;
 
+  const logoFile = await readFile(join(process.cwd(), './public/logo.png'));
+  const logoSrc = Uint8Array.from(logoFile).buffer;
+
   return new ImageResponse(
     (
       <div tw="flex h-full w-full flex-col items-center justify-center bg-black">
         <div tw="flex flex-none items-center justify-center border border-neutral-700 h-[160px] w-[160px] rounded-3xl">
-          <LogoIcon width="64" height="58" fill="white" />
+          <img src={logoSrc as any} width={64} height={58} />
         </div>
         <p tw="mt-12 text-6xl font-bold text-white">{title}</p>
       </div>
