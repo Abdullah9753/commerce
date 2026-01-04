@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import { ApplePayIcon, MadaIcon, MastercardIcon, VisaIcon } from 'components/icons/payment-icons';
 import FooterMenu from 'components/layout/footer-menu';
 import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/shopify';
@@ -45,12 +44,13 @@ export default async function Footer() {
           <p>
             &copy; {copyrightDate === '2023' ? '2023-2026' : '2023-2026'} LUMINA | Crafted by BAMZAHEM Digital
           </p>
-          {/* <div className="flex items-center gap-4 text-neutral-400 dark:text-neutral-500">
-            <VisaIcon className="h-8 opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100" />
-            <MastercardIcon className="h-8 opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100" />
-            <ApplePayIcon className="h-6 w-auto opacity-80 transition-opacity hover:opacity-100 dark:opacity-60 dark:hover:opacity-100" />
-            <MadaIcon className="h-6 w-auto opacity-80 transition-opacity hover:opacity-100 dark:opacity-60 dark:hover:opacity-100" />
-          </div> */}
+          <div className="flex items-center">
+            <img
+              src="/payment-methods.png"
+              alt="Payment Methods"
+              className="h-auto w-auto"
+            />
+          </div>
         </div>
       </div>
     </footer>
