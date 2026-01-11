@@ -6,56 +6,62 @@ This repository serves as a clean, minimalist starting point for building scalab
 
 ---
 
-### 🚀 Live Demos
+## 🚀 Live Demos
 
 See the architecture in action across different implementations:
 
 | Version | URL | Description |
 | :--- | :--- | :--- |
-| **🇺🇸 English (Base)** | **[lumina-demo-commerce.vercel.app](https://lumina-demo-commerce.vercel.app/)** | The clean, lightweight version represented by this repository. |
-| **🇸🇦 Arabic (Pro)** | **[commerce-v2-lumina.vercel.app](https://commerce-v2-lumina.vercel.app/ar)** | Advanced implementation featuring **Full RTL**, **Localization Middleware**, and **Custom Checkout Flows**. |
+| 🇺🇸 **English (Base)** | [lumina-demo-commerce.vercel.app](https://lumina-demo-commerce.vercel.app/) | Clean, lightweight version represented by this repository |
+| 🇸🇦 **Arabic (Pro)** | [commerce-v2-lumina.vercel.app/ar](https://commerce-v2-lumina.vercel.app/ar) | Full RTL, Localization Middleware, Custom Checkout Flows |
 
-> **Note:** The Arabic version demonstrates the full extensibility of this architecture for complex, multi-language enterprise requirements.
+> **Note:**  
+> The Arabic version demonstrates the full extensibility of this architecture for complex, multi-language enterprise requirements.
 
 ---
 
 ## ✨ Features
 
-- **Framework**: Next.js 15 (App Router & Server Components).
-- **Styling**: Tailwind CSS for utility-first design.
-- **Data Fetching**: Robust `shopifyFetch` utility with caching strategies and type safety.
-- **Performance**: Optimized for Core Web Vitals (LCP, CLS, FID).
-- **SEO**: Dynamic metadata, JSON-LD structured data, and Open Graph support.
-- **Type-Safe**: Written in TypeScript.
-- **Clean Architecture**: No bloat—just a solid foundation ready to scale.
+- **Framework**: Next.js 15 (App Router & Server Components)
+- **Styling**: Tailwind CSS (utility-first)
+- **Data Fetching**: `shopifyFetch` utility with caching & type safety
+- **Performance**: Optimized for Core Web Vitals (LCP, CLS, FID)
+- **SEO**: Dynamic metadata, JSON-LD, Open Graph
+- **Type-Safe**: Written in TypeScript
+- **Clean Architecture**: No bloat, scalable foundation
+
+---
 
 ## 🛠️ Getting Started
 
-Follow these steps to get the project running on your local machine.
+Follow these steps to run the project locally.
 
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
 
 2. Install dependencies
-Bash
 
+```bash
 pnpm install
+```
+
 3. Environment Variables
+
 Rename .env.example to .env.local (or create a new one):
 
 Bash
 
+```
 cp .env.example .env.local
+```
 Populate it with your store details:
 
 
 COMPANY_NAME="Lumina"
 SITE_NAME="Lumina Store"
-TWITTER_CREATOR="@bamzahem"
-TWITTER_SITE="@lumina"
 
 # Your Shopify Store Credentials
 SHOPIFY_STORE_DOMAIN="your-store.myshopify.com"
@@ -68,17 +74,27 @@ pnpm dev
 Open http://localhost:3000 to view your store.
 
 📦 Deployment
-The easiest way to deploy is using Vercel.
 
-Push your code to GitHub.
+The easiest way to deploy is using Vercel:
 
-Import the project in Vercel.
+Push your code to GitHub
 
-Add the Environment Variables in the Vercel dashboard.
+Import the project into Vercel
 
-Hit Deploy.
+Add Environment Variables in the Vercel dashboard
+
+Click Deploy
 
 📄 License
+
 This project is licensed under the MIT License.
 
-Designed & Developed by Bamzahem Digital
+Designed & Developed by
+Bamzahem Digital
+
+---
+
+### Acknowledgment
+
+This project is proudly powered and deployed on **Vercel**.  
+Special thanks to the Vercel team for providing an exceptional platform for building, scaling, and delivering high-performance Next.js applications.
