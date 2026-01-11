@@ -69,30 +69,33 @@ type ExtractVariables<T> = T extends { variables: object }
   : never;
 
 export async function shopifyFetch<T>({
+  cache = 'force-cache',
   headers,
   query,
-  variables,
+  tags,
+  variables
 }: {
+  cache?: RequestCache;
   headers?: HeadersInit;
   query: string;
+  tags?: string[];
   variables?: ExtractVariables<T>;
 }): Promise<{ status: number; body: T } | never> {
   try {
-    if (!endpoint) {
-      throw new Error("SHOPIFY_STORE_DOMAIN environment variable is not set");
-    }
-
     const result = await fetch(endpoint, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        "X-Shopify-Storefront-Access-Token": key,
+        'Content-Type': 'application/json',
+        'X-Shopify-Storefront-Access-Token': key,
         ...headers,
+        'Accept-Language': 'en'
       },
       body: JSON.stringify({
         ...(query && { query }),
-        ...(variables && { variables }),
+        ...(variables && { variables })
       }),
+      cache,
+      ...(tags && { next: { tags } })
     });
 
     const body = await result.json();
@@ -103,21 +106,21 @@ export async function shopifyFetch<T>({
 
     return {
       status: result.status,
-      body,
+      body
     };
   } catch (e) {
     if (isShopifyError(e)) {
       throw {
-        cause: e.cause?.toString() || "unknown",
+        cause: e.cause?.toString() || 'unknown',
         status: e.status || 500,
         message: e.message,
-        query,
+        query
       };
     }
 
     throw {
       error: e,
-      query,
+      query
     };
   }
 }
