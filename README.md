@@ -41,7 +41,7 @@ Follow these steps to run the project locally.
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
-
+```
 2. Install dependencies
 
 ```bash
@@ -52,11 +52,9 @@ pnpm install
 
 Rename .env.example to .env.local (or create a new one):
 
-Bash
 
-```
+```bash
 cp .env.example .env.local
-```
 Populate it with your store details:
 
 
@@ -68,7 +66,7 @@ SHOPIFY_STORE_DOMAIN="your-store.myshopify.com"
 SHOPIFY_STOREFRONT_ACCESS_TOKEN="your-public-access-token"
 SHOPIFY_REVALIDATION_SECRET="your-secret-key"
 4. Run Locally
-Bash
+```
 
 pnpm dev
 Open http://localhost:3000 to view your store.
